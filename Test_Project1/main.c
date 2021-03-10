@@ -1,20 +1,20 @@
-#define _CRT_SECURE_NO_WARNINGS
+ï»¿#define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <string.h>
 
 int main(int argc, char* argv[])
 {
 	char* p = "        123456789             ";
-	char* start = p; //Ê×ÔªËØµØÖ·
-	char* end = p + strlen(p) - 1; //Î²ÔªËØµØÖ·
+	char* start = p; //é¦–å…ƒç´ åœ°å€
+	char* end = p + strlen(p) - 1; //å°¾å…ƒç´ åœ°å€
 
-	//´Ó×óÍùÓÒ
+	//ä»å·¦å¾€å³
 	while (*start == ' ' && *start != '\0')
 	{
 		start++;
 	}
 
-	//´ÓÓÒÍù×ó
+	//ä»å³å¾€å·¦
 	while (*end == ' ' && end != p)
 	{
 		end--;
@@ -25,7 +25,7 @@ int main(int argc, char* argv[])
 
 	char buf[100] = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
 	strncpy(buf, start, n);
-	buf[n] = 0; //½áÊø·û
+	buf[n] = 0; //ç»“æŸç¬¦
 	printf("buf = %s\n", buf);
 
 	return 0;
